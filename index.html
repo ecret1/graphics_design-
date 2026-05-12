@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NUWAHEREZA ECRET | Designer & Blogger</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0f1a;
+    color:white;
+    line-height:1.7;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#00bfff;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00bfff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+    url('background.jpg') center/cover;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 80px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.profile-photo{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid #00bfff;
+    object-fit:cover;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:60px;
+    color:#00bfff;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#ddd;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#00bfff;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0099cc;
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#00bfff;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#131c2e;
+    padding:30px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#17253d;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#00bfff;
+}
+
+/* BLOG */
+
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.blog-card{
+    background:#131c2e;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+}
+
+.blog-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.blog-content{
+    padding:25px;
+}
+
+.blog-content h3{
+    margin-bottom:10px;
+    color:#00bfff;
+}
+
+/* EMAIL SUBSCRIPTION */
+
+.newsletter{
+    background:#111827;
+    text-align:center;
+    border-radius:20px;
+    padding:50px 20px;
+}
+
+.newsletter h2{
+    margin-bottom:15px;
+    color:#00bfff;
+}
+
+.newsletter form{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.newsletter input{
+    padding:15px;
+    width:320px;
+    border:none;
+    border-radius:30px;
+    outline:none;
+}
+
+.newsletter button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:#00bfff;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.newsletter button:hover{
+    background:#0099cc;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    display:block;
+    color:#00bfff;
+    margin-top:12px;
+    text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#05080f;
+    color:#999;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .profile-photo{
+        width:140px;
+        height:140px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">ECRET</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<img src="profile.jpg" class="profile-photo">
+
+<h1>NUWAHEREZA ECRET</h1>
+
+<p>
+Professional Graphics Designer, Printing Expert, Blogger and Digital Brand Creator.
+Helping businesses and individuals stand out through creative design and online marketing.
+</p>
+
+<a href="#blog" class="btn">Read My Blog</a>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="section-title">
+<h2>Services</h2>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>Graphic Design</h3>
+<p>Logos, flyers, posters, banners, social media graphics and branding.</p>
+</div>
+
+<div class="card">
+<h3>Printing Services</h3>
+<p>Books, brochures, calendars, invoices, receipts, vouchers and more.</p>
+</div>
+
+<div class="card">
+<h3>Email Marketing</h3>
+<p>Build email lists and promote your business professionally.</p>
+</div>
+
+<div class="card">
+<h3>Blogging</h3>
+<p>Create valuable content and grow your online audience.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- BLOG -->
+
+<section id="blog">
+
+<div class="section-title">
+<h2>Latest Blog Posts</h2>
+</div>
+
+<div class="blog-grid">
+
+<div class="blog-card">
+
+<img src="blog1.jpg">
+
+<div class="blog-content">
+
+<h3>Why Branding Matters</h3>
+
+<p>
+Strong branding helps your business stand out and attract more customers online.
+</p>
+
+</div>
+
+</div>
+
+<div class="blog-card">
+
+<img src="blog2.jpg">
+
+<div class="blog-content">
+
+<h3>Top Printing Tips</h3>
+
+<p>
+Learn how quality printing improves professionalism and trust in your business.
+</p>
+
+</div>
+
+</div>
+
+<div class="blog-card">
+
+<img src="blog3.jpg">
+
+<div class="blog-content">
+
+<h3>Growing With Email Marketing</h3>
+
+<p>
+Email marketing helps you build loyal customers and increase sales consistently.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section>
+
+<div class="newsletter">
+
+<h2>Subscribe To My Newsletter</h2>
+
+<p>
+Get blog updates, design tips and marketing insights directly in your inbox.
+</p>
+
+<form id="subscribeForm">
+
+<input 
+type="email" 
+placeholder="Enter your email"
+required
+>
+
+<button type="submit">Subscribe</button>
+
+</form>
+
+<p id="message"></p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-title">
+<h2>Contact Me</h2>
+</div>
+
+<div class="contact">
+
+<a href="tel:0775851533">📞 0775851533</a>
+
+<a href="tel:0741712498">📞 0741712498</a>
+
+<a href="https://wa.me/256775851533">
+💬 WhatsApp Chat
+</a>
+
+<a href="mailto:nuwaecret@gmail.com">
+✉️ nuwaecret@gmail.com
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 NUWAHEREZA ECRET | Designed By ECRET
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const form = document.getElementById('subscribeForm');
+const message = document.getElementById('message');
+
+form.addEventListener('submit', function(e){
+
+    e.preventDefault();
+
+    message.innerHTML = "✅ Thank you for subscribing!";
+    
+    form.reset();
+
+});
+
+</script>
+
+</body>
+</html>
