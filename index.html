@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NUWAHEREZA ECRET | Designer & Blogger</title>
+<!-- SEO -->
+<title>NUWAHEREZA ECRET | Graphic Designer, Printing & Branding Expert</title>
 
+<meta name="description" content="Professional graphic designer, printing expert, blogger and branding specialist offering logos, posters, printing services, email marketing and digital branding.">
+
+<meta name="keywords" content="Graphic Designer, Printing Services, Branding, Logo Design, Blogger, Email Marketing, Uganda Graphic Designer">
+
+<meta name="author" content="NUWAHEREZA ECRET">
+
+<meta name="robots" content="index, follow">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="NUWAHEREZA ECRET | Designer & Blogger">
+<meta property="og:description" content="Professional graphics designer and branding expert.">
+<meta property="og:image" content="Profile.jpg">
+<meta property="og:type" content="website">
+
+<!-- FAVICON -->
+<link rel="icon" href="logo.jpg">
+
+<!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -34,7 +55,7 @@ nav{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(0,0,0,0.7);
+    background:rgba(0,0,0,0.75);
     backdrop-filter:blur(10px);
     padding:15px 8%;
     display:flex;
@@ -44,7 +65,7 @@ nav{
 }
 
 .logo{
-    font-size:24px;
+    font-size:26px;
     font-weight:700;
     color:#00bfff;
 }
@@ -60,6 +81,7 @@ nav ul li a{
     color:white;
     text-decoration:none;
     transition:0.3s;
+    font-weight:500;
 }
 
 nav ul li a:hover{
@@ -70,28 +92,31 @@ nav ul li a:hover{
 
 .hero{
     min-height:100vh;
+
     background:
-    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-    url('background.jpg') center/cover;
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+    url('background.jpg') center/cover no-repeat;
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:120px 20px 80px;
+
+    padding:130px 20px 80px;
 }
 
 .hero-content{
-    max-width:850px;
+    max-width:900px;
 }
 
 .profile-photo{
-    width:180px;
-    height:180px;
+    width:190px;
+    height:190px;
     border-radius:50%;
     border:5px solid #00bfff;
     object-fit:cover;
     margin-bottom:25px;
+    box-shadow:0 0 25px rgba(0,191,255,0.5);
 }
 
 .hero h1{
@@ -101,9 +126,9 @@ nav ul li a:hover{
 }
 
 .hero p{
-    font-size:18px;
     color:#ddd;
-    margin-bottom:30px;
+    font-size:19px;
+    margin-bottom:35px;
 }
 
 .btn{
@@ -112,7 +137,7 @@ nav ul li a:hover{
     background:#00bfff;
     color:white;
     text-decoration:none;
-    border-radius:30px;
+    border-radius:35px;
     transition:0.3s;
     font-weight:600;
 }
@@ -134,7 +159,7 @@ section{
 }
 
 .section-title h2{
-    font-size:40px;
+    font-size:42px;
     color:#00bfff;
 }
 
@@ -159,8 +184,8 @@ section{
 }
 
 .card h3{
-    margin-bottom:15px;
     color:#00bfff;
+    margin-bottom:15px;
 }
 
 /* BLOG */
@@ -205,26 +230,37 @@ section{
     text-decoration:underline;
 }
 
-/* EMAIL SUBSCRIPTION */
+/* GOOGLE REVIEWS */
+
+#reviews .card{
+    text-align:center;
+}
+
+#reviews h4{
+    margin-top:15px;
+    color:#00bfff;
+}
+
+/* NEWSLETTER */
 
 .newsletter{
     background:#111827;
-    text-align:center;
     border-radius:20px;
+    text-align:center;
     padding:50px 20px;
 }
 
 .newsletter h2{
-    margin-bottom:15px;
     color:#00bfff;
+    margin-bottom:15px;
 }
 
 .newsletter form{
-    margin-top:25px;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:15px;
+    margin-top:25px;
 }
 
 .newsletter input{
@@ -259,17 +295,38 @@ section{
 .contact a{
     display:block;
     color:#00bfff;
-    margin-top:12px;
+    margin-top:15px;
     text-decoration:none;
+    font-size:18px;
 }
 
 /* FOOTER */
 
 footer{
+    background:#05080f;
     text-align:center;
     padding:30px;
-    background:#05080f;
     color:#999;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+    z-index:1000;
 }
 
 /* MOBILE */
@@ -290,6 +347,10 @@ footer{
         height:140px;
     }
 
+    section{
+        padding:70px 6%;
+    }
+
 }
 
 </style>
@@ -306,7 +367,8 @@ footer{
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="blog.html">Blog</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#reviews">Reviews</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -318,13 +380,12 @@ footer{
 
 <div class="hero-content">
 
-<img src="Profile.jpg" class="profile-photo" alt="Profile Photo">
+<img src="Profile.jpg" class="profile-photo" alt="NUWAHEREZA ECRET">
 
 <h1>NUWAHEREZA ECRET</h1>
 
 <p>
-Professional Graphics Designer, Printing Expert, Blogger and Digital Brand Creator.
-Helping businesses and individuals stand out through creative design and online marketing.
+Professional Graphics Designer, Printing Expert, Blogger and Digital Brand Creator helping businesses grow through modern branding and online marketing.
 </p>
 
 <a href="blog.html" class="btn">Read My Blog</a>
@@ -346,28 +407,28 @@ Helping businesses and individuals stand out through creative design and online 
 <div class="card">
 <h3>Graphic Design</h3>
 <p>
-Logos, flyers, posters, banners, social media graphics and branding.
+Logos, posters, flyers, banners, social media graphics and branding designs.
 </p>
 </div>
 
 <div class="card">
 <h3>Printing Services</h3>
 <p>
-Books, brochures, calendars, invoices, receipts, vouchers and more.
+Professional printing for books, brochures, calendars, invoices and business materials.
 </p>
 </div>
 
 <div class="card">
 <h3>Email Marketing</h3>
 <p>
-Build email lists and promote your business professionally.
+Grow your audience and increase sales through strategic email campaigns.
 </p>
 </div>
 
 <div class="card">
 <h3>Blogging</h3>
 <p>
-Create valuable content and grow your online audience.
+Creative blogging solutions that help businesses improve SEO and online visibility.
 </p>
 </div>
 
@@ -383,10 +444,6 @@ Create valuable content and grow your online audience.
 <h2>Latest Blog Posts</h2>
 </div>
 
-<div style="text-align:center; margin-bottom:40px;">
-<a href="blog.html" class="btn">Visit My Blog</a>
-</div>
-
 <div class="blog-grid">
 
 <div class="blog-card">
@@ -396,11 +453,13 @@ Create valuable content and grow your online audience.
 <div class="blog-content">
 
 <h3>
-<a href="blog.html">Why Branding Matters</a>
+<a href="blog.html">
+Why Branding Matters
+</a>
 </h3>
 
 <p>
-Strong branding helps your business stand out and attract more customers online.
+Learn how professional branding helps businesses attract more customers online.
 </p>
 
 </div>
@@ -414,11 +473,13 @@ Strong branding helps your business stand out and attract more customers online.
 <div class="blog-content">
 
 <h3>
-<a href="blog.html">Top Printing Tips</a>
+<a href="blog.html">
+Top Printing Tips
+</a>
 </h3>
 
 <p>
-Learn how quality printing improves professionalism and trust in your business.
+Discover printing techniques that improve quality and professionalism.
 </p>
 
 </div>
@@ -432,16 +493,68 @@ Learn how quality printing improves professionalism and trust in your business.
 <div class="blog-content">
 
 <h3>
-<a href="blog.html">Growing With Email Marketing</a>
+<a href="blog.html">
+Growing With Email Marketing
+</a>
 </h3>
 
 <p>
-Email marketing helps you build loyal customers and increase sales consistently.
+Use email marketing to build loyal customers and increase sales consistently.
 </p>
 
 </div>
 
 </div>
+
+</div>
+
+</section>
+
+<!-- GOOGLE REVIEWS -->
+
+<section id="reviews">
+
+<div class="section-title">
+<h2>Google Reviews</h2>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>
+Excellent branding and fast delivery. Very professional designer.
+</p>
+<h4>- Sarah K.</h4>
+</div>
+
+<div class="card">
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>
+High quality printing services and good customer care.
+</p>
+<h4>- David M.</h4>
+</div>
+
+<div class="card">
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>
+My business logo and posters were designed perfectly.
+</p>
+<h4>- Brian T.</h4>
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top:40px;">
+
+<a 
+href="https://search.google.com/local/writereview?placeid=YOUR_GOOGLE_PLACE_ID"
+class="btn"
+target="_blank"
+>
+Leave A Google Review
+</a>
 
 </div>
 
@@ -456,7 +569,7 @@ Email marketing helps you build loyal customers and increase sales consistently.
 <h2>Subscribe To My Newsletter</h2>
 
 <p>
-Get blog updates, design tips and marketing insights directly in your inbox.
+Get blogging tips, design inspiration and marketing updates directly in your inbox.
 </p>
 
 <form id="subscribeForm">
@@ -487,16 +600,20 @@ required
 
 <div class="contact">
 
-<a href="tel:0775851533">📞 0775851533</a>
+<a href="tel:0775851533">
+📞 0775851533
+</a>
 
-<a href="tel:0741712498">📞 0741712498</a>
-
-<a href="https://wa.me/256775851533">
-💬 WhatsApp Chat
+<a href="tel:0741712498">
+📞 0741712498
 </a>
 
 <a href="mailto:nuwaecret@gmail.com">
 ✉️ nuwaecret@gmail.com
+</a>
+
+<a href="https://wa.me/256775851533" target="_blank">
+💬 WhatsApp Chat
 </a>
 
 </div>
@@ -507,24 +624,35 @@ required
 
 <footer>
 
-© 2026 NUWAHEREZA ECRET | Designed By ECRET
+© 2026 NUWAHEREZA ECRET | All Rights Reserved
 
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+
+<a 
+href="https://wa.me/256775851533"
+class="whatsapp"
+target="_blank"
+>
+💬
+</a>
 
 <!-- JAVASCRIPT -->
 
 <script>
 
 const form = document.getElementById('subscribeForm');
+
 const message = document.getElementById('message');
 
 form.addEventListener('submit', function(e){
 
-    e.preventDefault();
+e.preventDefault();
 
-    message.innerHTML = "✅ Thank you for subscribing!";
+message.innerHTML = "✅ Thank you for subscribing!";
 
-    form.reset();
+form.reset();
 
 });
 
