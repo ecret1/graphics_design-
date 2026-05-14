@@ -53,6 +53,7 @@ nav ul{
     display:flex;
     gap:25px;
     list-style:none;
+    flex-wrap:wrap;
 }
 
 nav ul li a{
@@ -72,7 +73,7 @@ nav ul li a:hover{
     background:
     linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
     url('background.jpg') center/cover;
-    
+
     display:flex;
     align-items:center;
     justify-content:center;
@@ -113,6 +114,7 @@ nav ul li a:hover{
     text-decoration:none;
     border-radius:30px;
     transition:0.3s;
+    font-weight:600;
 }
 
 .btn:hover{
@@ -192,7 +194,15 @@ section{
 
 .blog-content h3{
     margin-bottom:10px;
+}
+
+.blog-content a{
     color:#00bfff;
+    text-decoration:none;
+}
+
+.blog-content a:hover{
+    text-decoration:underline;
 }
 
 /* EMAIL SUBSCRIPTION */
@@ -233,6 +243,7 @@ section{
     color:white;
     cursor:pointer;
     transition:0.3s;
+    font-weight:600;
 }
 
 .newsletter button:hover{
@@ -295,7 +306,7 @@ footer{
 <ul>
 <li><a href="#home">Home</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="#blog">Blog</a></li>
+<li><a href="blog.html">Blog</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -307,7 +318,7 @@ footer{
 
 <div class="hero-content">
 
-<img src="Profile.jpg" class="profile-photo">
+<img src="Profile.jpg" class="profile-photo" alt="Profile Photo">
 
 <h1>NUWAHEREZA ECRET</h1>
 
@@ -316,7 +327,7 @@ Professional Graphics Designer, Printing Expert, Blogger and Digital Brand Creat
 Helping businesses and individuals stand out through creative design and online marketing.
 </p>
 
-<a href="#blog" class="btn "blog.html">Read My Blog</a>
+<a href="blog.html" class="btn">Read My Blog</a>
 
 </div>
 
@@ -334,22 +345,30 @@ Helping businesses and individuals stand out through creative design and online 
 
 <div class="card">
 <h3>Graphic Design</h3>
-<p>Logos, flyers, posters, banners, social media graphics and branding.</p>
+<p>
+Logos, flyers, posters, banners, social media graphics and branding.
+</p>
 </div>
 
 <div class="card">
 <h3>Printing Services</h3>
-<p>Books, brochures, calendars, invoices, receipts, vouchers and more.</p>
+<p>
+Books, brochures, calendars, invoices, receipts, vouchers and more.
+</p>
 </div>
 
 <div class="card">
 <h3>Email Marketing</h3>
-<p>Build email lists and promote your business professionally.</p>
+<p>
+Build email lists and promote your business professionally.
+</p>
 </div>
 
 <div class="card">
 <h3>Blogging</h3>
-<p>Create valuable content and grow your online audience.</p>
+<p>
+Create valuable content and grow your online audience.
+</p>
 </div>
 
 </div>
@@ -357,22 +376,28 @@ Helping businesses and individuals stand out through creative design and online 
 </section>
 
 <!-- BLOG -->
-<a href="blog.html">Visit My Blog</a>
+
 <section id="blog">
 
 <div class="section-title">
 <h2>Latest Blog Posts</h2>
 </div>
 
+<div style="text-align:center; margin-bottom:40px;">
+<a href="blog.html" class="btn">Visit My Blog</a>
+</div>
+
 <div class="blog-grid">
 
 <div class="blog-card">
 
-<img src="logo.jpg">
+<img src="logo.jpg" alt="Branding">
 
 <div class="blog-content">
 
-<h3>Why Branding Matters</h3>
+<h3>
+<a href="blog.html">Why Branding Matters</a>
+</h3>
 
 <p>
 Strong branding helps your business stand out and attract more customers online.
@@ -384,11 +409,13 @@ Strong branding helps your business stand out and attract more customers online.
 
 <div class="blog-card">
 
-<img src="blog2.jpg">
+<img src="blog2.jpg" alt="Printing Tips">
 
 <div class="blog-content">
 
-<h3>Top Printing Tips</h3>
+<h3>
+<a href="blog.html">Top Printing Tips</a>
+</h3>
 
 <p>
 Learn how quality printing improves professionalism and trust in your business.
@@ -400,11 +427,13 @@ Learn how quality printing improves professionalism and trust in your business.
 
 <div class="blog-card">
 
-<img src="blog3.jpg">
+<img src="blog3.jpg" alt="Email Marketing">
 
 <div class="blog-content">
 
-<h3>Growing With Email Marketing</h3>
+<h3>
+<a href="blog.html">Growing With Email Marketing</a>
+</h3>
 
 <p>
 Email marketing helps you build loyal customers and increase sales consistently.
@@ -432,8 +461,8 @@ Get blog updates, design tips and marketing insights directly in your inbox.
 
 <form id="subscribeForm">
 
-<input 
-type="email" 
+<input
+type="email"
 placeholder="Enter your email"
 required
 >
@@ -494,7 +523,7 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
 
     message.innerHTML = "✅ Thank you for subscribing!";
-    
+
     form.reset();
 
 });
