@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ECRET Full Commerce System - Blog, Shop, Orders, Payments" />
+  <title>ECRET Commerce System</title>  <style>
+    :root{
+      --primary:#6a0dad;
+      --secondary:#a855f7;
+      --bg:linear-gradient(135deg,var(--primary),var(--secondary));
+      --card:rgba(255,255,255,0.12);
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+
+    body{
+      background:var(--bg);
+      color:white;
+      min-height:100vh;
+    }
+
+    header{
+      text-align:center;
+      padding:20px;
+      background:rgba(0,0,0,0.3);
+    }
+
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      padding:10px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      padding:8px 12px;
+      background:rgba(255,255,255,0.15);
+      border-radius:8px;
+    }
+
+    section{
+      padding:20px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:15px;
+      border-radius:12px;
+      margin-bottom:15px;
+      backdrop-filter:blur(10px);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:15px;
+    }
+
+    img{width:100%;border-radius:10px;}
+
+    input,textarea{
+      width:100%;
+      padding:10px;
+      margin-top:8px;
+      border-radius:8px;
+      border:none;
+    }
+
+    button{
+      padding:10px;
+      border:none;
+      border-radius:8px;
+      background:white;
+      color:var(--primary);
+      font-weight:bold;
+      margin-top:8px;
+      cursor:pointer;
+    }
+
+    button:hover{background:#eee;}
+
+    .cart{
+      position:fixed;
+      right:10px;
+      bottom:10px;
+      background:white;
+      color:black;
+      padding:10px;
+      border-radius:10px;
+      width:200px;
+    }
+  </style></head><body><header>
+  <h1>ECRET Full Commerce System</h1>
+  <p>Blog • Shop • Orders • Payments • Admin</p>
+</header><nav>
+  <a href="#shop">Shop</a>
+  <a href="#blog">Blog</a>
+  <a href="#admin">Admin</a>
+  <a href="#checkout">Checkout</a>
+</nav><!-- BLOG --><section id="blog" class="card">
+  <h2>Blog System (Saved Online Ready)</h2>
+  <textarea id="blogInput" placeholder="Write blog..."></textarea>
+  <button onclick="addBlog()">Publish</button>
+  <div id="blogs"></div>
+</section><!-- SHOP --><section id="shop" class="card">
+  <h2>Products</h2>
+  <div class="grid" id="productList"></div>
+</section><!-- CART --><div class="cart">
+  <h4>Cart</h4>
+  <div id="cartItems"></div>
+  <p>Total: $<span id="total">0</span></p>
+  <button onclick="goCheckout()">Checkout</button>
+</div><!-- CHECKOUT --><section id="checkout" class="card">
+  <h2>Checkout</h2>
+  <input id="name" placeholder="Full Name" />
+  <input id="address" placeholder="Address" />
+  <button onclick="placeOrder()">Place Order</button>
+</section><!-- ADMIN --><section id="admin" class="card">
+  <h2>Admin Panel</h2>
+  <input id="adminEmail" placeholder="Admin Email" />
+  <button onclick="loginAdmin()">Login</button>  <div id="adminPanel" style="display:none">
+    <h3>Add Product</h3>
+    <input id="pname" placeholder="Product Name" />
+    <input id="pprice" placeholder="Price" />
+    <button onclick="addProduct()">Add</button>
+  </div>
+</section><script>
+let cart=[];
+let total=0;
+let products=[
+  {name:"Sneakers",price:50,img:"images/shoe1.jpg"},
+  {name:"Shirt",price:20,img:"images/shirt1.jpg"}
+];
+
+function renderProducts(){
+  let box=document.getElementById("productList");
+  box.innerHTML="";
+  products.forEach((p,i)=>{
+    box.innerHTML+=`
+      <div class='card'>
+        <img src='${p.img}' />
+        <p>${p.name}</p>
+        <p>$${p.price}</p>
+        <button onclick='addToCart(${i})'>Add</button>
+      </div>
+    `;
+  });
+}
+
+function addToCart(i){
+  cart.push(products[i]);
+  total+=products[i].price;
+  renderCart();
+}
+
+function renderCart(){
+  let box=document.getElementById("cartItems");
+  box.innerHTML="";
+  cart.forEach(i=>box.innerHTML+=`<p>${i.name} - $${i.price}</p>`);
+  document.getElementById("total").innerText=total;
+}
+
+function goCheckout(){
+  document.getElementById("checkout").scrollIntoView();
+}
+
+function placeOrder(){
+  alert("Order placed successfully! (Connect Stripe/PayPal for real payments)");
+  cart=[];
+  total=0;
+  renderCart();
+}
+
+function addBlog(){
+  let data=JSON.parse(localStorage.getItem("blogs")||"[]");
+  data.unshift(document.getElementById("blogInput").value);
+  localStorage.setItem("blogs",JSON.stringify(data));
+  loadBlogs();
+}
+
+function loadBlogs(){
+  let data=JSON.parse(localStorage.getItem("blogs")||"[]");
+  let box=document.getElementById("blogs");
+  box.innerHTML="";
+  data.forEach(b=>box.innerHTML+=`<div class='card'>${b}</div>`);
+}
+
+function loginAdmin(){
+  let email=document.getElementById("adminEmail").value;
+  if(email.includes("admin")){
+    document.getElementById("adminPanel").style.display="block";
+    alert("Admin access granted");
+  } else {
+    alert("Access denied");
+  }
+}
+
+function addProduct(){
+  let name=document.getElementById("pname").value;
+  let price=document.getElementById("pprice").value;
+  products.push({name,price,img:"images/default.jpg"});
+  renderProducts();
+}
+
+loadBlogs();
+renderProducts();
+</script></body>
+</html>
