@@ -1,75 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ECRET Blog</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="css/style.css">
 <style>
-
-body{
-font-family:'Poppins',sans-serif;
-background:#0b0f1a;
-color:white;
-padding:40px;
-line-height:1.8;
-}
-
-h1{
-color:#00bfff;
-margin-bottom:20px;
-}
-
-.article{
-max-width:900px;
-margin:auto;
-background:#131c2e;
-padding:40px;
-border-radius:20px;
-}
-
-a{
-color:#00bfff;
-text-decoration:none;
-}
-
+body { font-family:'Poppins',sans-serif; background:#0b0f1a; color:white; padding:40px; line-height:1.8; }
+h1 { color:#00bfff; margin-bottom:20px; }
+.article { max-width:900px; margin:auto; background:#131c2e; padding:40px; border-radius:20px; }
+a { color:#00bfff; text-decoration:none; }
 </style>
-
 </head>
-
 <body>
 
 <div class="article">
-
-<h1>Graphic Design Tips</h1>
-
-<p>
-Graphic design helps businesses attract customers and build strong brands.
-</p>
-
-<p>
-Use quality images, simple colors and readable fonts for professional designs.
-</p>
-
-<p>
-Consistency in branding improves trust and visibility online.
-</p>
-
-<p>
-Email marketing and blogging also improve SEO and business growth.
-</p>
-
-<br>
-
-<a href="index.html">
-← Back Home
-</a>
-
+  <h1 id="blog-title">Blog Title</h1>
+  <p id="blog-content">Blog content will appear here.</p>
+  <br>
+  <a href="index.html">← Back Home</a>
 </div>
+
+<script>
+const posts = {
+  "branding": {
+    title: "Why Branding Matters",
+    content: "Professional branding helps businesses grow online, build trust, and stand out from competitors."
+  },
+  "design-tips": {
+    title: "Graphic Design Tips",
+    content: "Use quality images, simple colors, and readable fonts for professional designs. Consistency in branding improves trust and visibility online."
+  },
+  "email-marketing": {
+    title: "Email Marketing Guide",
+    content: "Use email marketing to grow your audience, engage customers, and increase sales. Combine with blogging to boost SEO."
+  }
+};
+
+const urlParams = new URLSearchParams(window.location.search);
+const postKey = urlParams.get('post');
+
+if(posts[postKey]){
+  document.getElementById('blog-title').innerText = posts[postKey].title;
+  document.getElementById('blog-content').innerText = posts[postKey].content;
+} else {
+  document.getElementById('blog-title').innerText = "Blog Not Found";
+  document.getElementById('blog-content').innerText = "Sorry, the blog you are looking for does not exist.";
+}
+</script>
 
 </body>
 </html>

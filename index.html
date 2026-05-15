@@ -1,509 +1,139 @@
-<!-- =========================
-CREATE THIS FILE AS: index.html
-========================= -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>NUWAHEREZA ECRET | Graphic Designer</title>
-
 <meta name="description" content="Professional graphic designer, printing expert, blogger and branding specialist.">
-
-<link rel="icon" href="logo.jpg">
-
+<link rel="icon" href="images/logo.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#0b0f1a;
-color:white;
-line-height:1.7;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#000;
-padding:15px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-}
-
-.logo{
-font-size:25px;
-font-weight:700;
-color:#00bfff;
-}
-
-nav ul{
-display:flex;
-gap:20px;
-list-style:none;
-flex-wrap:wrap;
-}
-
-nav ul li a{
-color:white;
-text-decoration:none;
-}
-
-.hero{
-min-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('background.jpg') center/cover no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:120px 20px;
-}
-
-.profile-photo{
-width:180px;
-height:180px;
-border-radius:50%;
-border:5px solid #00bfff;
-object-fit:cover;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:55px;
-color:#00bfff;
-}
-
-.hero p{
-max-width:700px;
-margin:20px auto;
-color:#ddd;
-}
-
-.btn{
-display:inline-block;
-padding:14px 30px;
-background:#00bfff;
-color:white;
-text-decoration:none;
-border-radius:30px;
-margin-top:15px;
-}
-
-section{
-padding:80px 8%;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:40px;
-}
-
-.section-title h2{
-font-size:40px;
-color:#00bfff;
-}
-
-.services,
-.blog-grid,
-.review-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:#131c2e;
-padding:25px;
-border-radius:20px;
-}
-
-.card h3{
-color:#00bfff;
-margin-bottom:15px;
-}
-
-.blog-card{
-background:#131c2e;
-border-radius:20px;
-overflow:hidden;
-}
-
-.blog-card img{
-width:100%;
-height:220px;
-object-fit:cover;
-}
-
-.blog-content{
-padding:20px;
-}
-
-.blog-content a{
-color:#00bfff;
-text-decoration:none;
-}
-
-.newsletter{
-background:#131c2e;
-padding:40px;
-border-radius:20px;
-text-align:center;
-}
-
-.newsletter input{
-padding:15px;
-width:300px;
-border:none;
-border-radius:30px;
-margin-top:20px;
-}
-
-.newsletter button{
-padding:15px 30px;
-border:none;
-background:#00bfff;
-color:white;
-border-radius:30px;
-cursor:pointer;
-margin-left:10px;
-}
-
-.contact{
-text-align:center;
-}
-
-.contact a{
-display:block;
-color:#00bfff;
-margin-top:15px;
-text-decoration:none;
-}
-
-footer{
-background:#000;
-padding:30px;
-text-align:center;
-color:#aaa;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-text-decoration:none;
-font-size:30px;
-color:white;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:40px;
-}
-
-.profile-photo{
-width:140px;
-height:140px;
-}
-
-nav{
-flex-direction:column;
-gap:10px;
-}
-
-}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-
-<div class="logo">ECRET</div>
-
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#blog">Blog</a></li>
-<li><a href="#reviews">Reviews</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
+  <div class="logo">ECRET</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="home">
-
-<div>
-
-<img src="Profile.jpg" class="Profile-photo">
-
-<h1>NUWAHEREZA ECRET</h1>
-
-<p>
-Professional Graphics Designer, Printing Expert, Blogger and Digital Brand Creator helping businesses grow online.
-</p>
-
-<a href="blog.html" class="btn">Read My Blog</a>
-
-</div>
-
+  <div>
+    <img src="images/Profile.jpg" class="profile-photo">
+    <h1>NUWAHEREZA ECRET</h1>
+    <p>Professional Graphics Designer, Printing Expert, Blogger and Digital Brand Creator helping businesses grow online.</p>
+    <a href="blog.html?post=design-tips" class="btn">Read My Blog</a>
+  </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
-
-<div class="section-title">
-<h2>Services</h2>
-</div>
-
-<div class="services">
-
-<div class="card">
-<h3>Graphic Design</h3>
-<p>Logos, posters, flyers, banners and branding designs.</p>
-</div>
-
-<div class="card">
-<h3>Printing Services</h3>
-<p>Professional printing for books, brochures and business materials.</p>
-</div>
-
-<div class="card">
-<h3>Email Marketing</h3>
-<p>Grow your audience and increase sales through email campaigns.</p>
-</div>
-
-<div class="card">
-<h3>Blogging</h3>
-<p>Creative blogging solutions that improve SEO and online visibility.</p>
-</div>
-
-</div>
-
+  <div class="section-title"><h2>Services</h2></div>
+  <div class="services">
+    <div class="card">
+      <h3>Graphic Design</h3>
+      <p>Logos, posters, flyers, banners and branding designs.</p>
+    </div>
+    <div class="card">
+      <h3>Printing Services</h3>
+      <p>Professional printing for books, brochures and business materials.</p>
+    </div>
+    <div class="card">
+      <h3>Email Marketing</h3>
+      <p>Grow your audience and increase sales through email campaigns.</p>
+    </div>
+    <div class="card">
+      <h3>Blogging</h3>
+      <p>Creative blogging solutions that improve SEO and online visibility.</p>
+    </div>
+  </div>
 </section>
 
+<!-- BLOG -->
 <section id="blog">
-
-<div class="section-title">
-<h2>Latest Blog Posts</h2>
-</div>
-
-<div class="blog-grid">
-
-<div class="blog-card">
-
-<img src="logo.jpg">
-
-<div class="blog-content">
-
-<h3>
-<a href="blog.html">
-Why Branding Matters
-</a>
-</h3>
-
-<p>
-Learn how professional branding helps businesses grow online.
-</p>
-
-</div>
-
-</div>
-
-<div class="blog-card">
-
-<img src="blog2.jpg">
-
-<div class="blog-content">
-
-<h3>
-<a href="blog.html">
-Graphic Design Tips
-</a>
-</h3>
-
-<p>
-Simple ways to improve your designs professionally.
-</p>
-
-</div>
-
-</div>
-
-<div class="blog-card">
-
-<img src="blog3.jpg">
-
-<div class="blog-content">
-
-<h3>
-<a href="blog.html">
-Email Marketing Guide
-</a>
-</h3>
-
-<p>
-Use email marketing to build loyal customers.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="section-title"><h2>Latest Blog Posts</h2></div>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <img src="images/logo.jpg">
+      <div class="blog-content">
+        <h3><a href="blog.html?post=branding">Why Branding Matters</a></h3>
+        <p>Learn how professional branding helps businesses grow online.</p>
+      </div>
+    </div>
+    <div class="blog-card">
+      <img src="images/blog2.jpg">
+      <div class="blog-content">
+        <h3><a href="blog.html?post=design-tips">Graphic Design Tips</a></h3>
+        <p>Simple ways to improve your designs professionally.</p>
+      </div>
+    </div>
+    <div class="blog-card">
+      <img src="images/blog3.jpg">
+      <div class="blog-content">
+        <h3><a href="blog.html?post=email-marketing">Email Marketing Guide</a></h3>
+        <p>Use email marketing to build loyal customers.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- REVIEWS -->
 <section id="reviews">
-
-<div class="section-title">
-<h2>Google Reviews</h2>
-</div>
-
-<div class="review-grid">
-
-<div class="card">
-<h3>⭐⭐⭐⭐⭐</h3>
-<p>Excellent branding and fast delivery.</p>
-</div>
-
-<div class="card">
-<h3>⭐⭐⭐⭐⭐</h3>
-<p>Professional printing services and customer care.</p>
-</div>
-
-<div class="card">
-<h3>⭐⭐⭐⭐⭐</h3>
-<p>Very creative designer and high quality work.</p>
-</div>
-
-</div>
-
-<div style="text-align:center; margin-top:40px;">
-
-<a
-href="https://search.google.com/local/writereview?placeid=ChIJAzpm6TIa2RkRM0P7jBXYyOs"
-class="btn"
-target="_blank"
->
-Leave A Google Review
-</a>
-
-</div>
-
+  <div class="section-title"><h2>Google Reviews</h2></div>
+  <div class="review-grid">
+    <div class="card"><h3>⭐⭐⭐⭐⭐</h3><p>Excellent branding and fast delivery.</p></div>
+    <div class="card"><h3>⭐⭐⭐⭐⭐</h3><p>Professional printing services and customer care.</p></div>
+    <div class="card"><h3>⭐⭐⭐⭐⭐</h3><p>Very creative designer and high quality work.</p></div>
+  </div>
+  <div style="text-align:center; margin-top:40px;">
+    <a href="https://search.google.com/local/writereview?placeid=ChIJAzpm6TIa2RkRM0P7jBXYyOsNyamitanga"
+       class="btn" target="_blank">Leave A Google Review</a>
+  </div>
 </section>
 
+<!-- NEWSLETTER -->
 <section>
-
-<div class="newsletter">
-
-<h2>Subscribe To Newsletter</h2>
-
-<p>
-Get updates about blogging, branding and design.
-</p>
-
-<form id="subscribeForm">
-
-<input
-type="email"
-placeholder="Enter your email"
-required
->
-
-<button type="submit">
-Subscribe
-</button>
-
-</form>
-
-<p id="message"></p>
-
-</div>
-
+  <div class="newsletter">
+    <h2>Subscribe To Newsletter</h2>
+    <p>Get updates about blogging, branding and design.</p>
+    <form id="subscribeForm">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="message"></p>
+  </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-
-<div class="section-title">
-<h2>Contact Me</h2>
-</div>
-
-<div class="contact">
-
-<a href="tel:0775851533">
-📞 0775851533
-</a>
-
-<a href="mailto:nuwaecret@gmail.com">
-✉️ nuwaecret@gmail.com
-</a>
-
-<a href="https://wa.me/256775851533" target="_blank">
-💬 WhatsApp Chat
-</a>
-
-</div>
-
+  <div class="section-title"><h2>Contact Me</h2></div>
+  <div class="contact">
+    <a href="tel:0775851533">📞 0775851533</a>
+    <a href="mailto:nuwaecret@gmail.com">✉️ nuwaecret@gmail.com</a>
+    <a href="https://wa.me/256775851533" target="_blank">💬 WhatsApp Chat</a>
+  </div>
 </section>
 
-<footer>
-
-© 2026 NUWAHEREZA ECRET | All Rights Reserved
-
-</footer>
-
-<a
-href="https://wa.me/256775851533"
-class="whatsapp"
-target="_blank"
->
-💬
-</a>
+<!-- FOOTER -->
+<footer>© 2026 NUWAHEREZA ECRET | All Rights Reserved</footer>
+<a href="https://wa.me/256775851533" class="whatsapp" target="_blank">💬</a>
 
 <script>
-
 const form = document.getElementById('subscribeForm');
-
 const message = document.getElementById('message');
-
 form.addEventListener('submit', function(e){
-
-e.preventDefault();
-
-message.innerHTML =
-"✅ Thank you for subscribing!";
-
-form.reset();
-
+  e.preventDefault();
+  message.innerHTML = "✅ Thank you for subscribing!";
+  form.reset();
 });
-
 </script>
 
 </body>
