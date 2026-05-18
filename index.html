@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>NUWAHEREZA ECRET | Graphic Designer, Printing & Branding Expert</title>
+
+<meta name="description" content="Professional graphic designer, printing expert, blogger and branding specialist offering logos, posters, printing services, email marketing and digital branding.">
+
+<meta name="keywords" content="Graphic Designer, Printing Services, Branding, Logo Design, Blogger, Email Marketing, Uganda Graphic Designer">
+
+<meta name="author" content="NUWAHEREZA ECRET">
+
+<meta name="robots" content="index, follow">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="NUWAHEREZA ECRET | Designer & Blogger">
+<meta property="og:description" content="Professional graphics designer and branding expert.">
+<meta property="og:image" content="Profile.jpg">
+<meta property="og:type" content="website">
+
+<!-- FAVICON -->
+<link rel="icon" href="Logo.jpg">
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0f1a;
+    color:white;
+    line-height:1.7;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(10px);
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:700;
+    color:blue;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#00bfff;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+    url('background.jpg') center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:130px 20px 80px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.profile-photo{
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    border:5px solid #00bfff;
+    object-fit:cover;
+    margin-bottom:25px;
+    box-shadow:0 0 25px rgba(0,191,255,0.5);
+}
+
+.hero h1{
+    font-size:60px;
+    color:#00bfff;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:white;
+    font-size:19px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#00bfff;
+    color:white;
+    text-decoration:none;
+    border-radius:35px;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:white;
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#00bfff;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#131c2e;
+    padding:30px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:white;
+}
+
+.card h3{
+    color:blue;
+    margin-bottom:15px;
+}
+
+/* BLOG */
+
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.blog-card{
+    background:purple;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.blog-card:hover{
+    transform:translateY(-8px);
+}
+
+.blog-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.blog-content{
+    padding:25px;
+}
+
+.blog-content h3{
+    margin-bottom:10px;
+}
+
+.blog-content a{
+    color:white;
+    text-decoration:none;
+}
+
+.blog-content a:hover{
+    text-decoration:underline;
+}
+
+/* GOOGLE REVIEWS */
+
+#reviews .card{
+    text-align:center;
+}
+
+#reviews h4{
+    margin-top:15px;
+    color:white;
+}
+
+<!-- NEWSLETTER -->
+<section>
+<div class="newsletter">
+<h2>Subscribe To My Newsletter</h2>
+<p>
+Get blogging tips, design inspiration and marketing updates directly in your inbox.
+</p>
+
+<!-- MAILCHIMP FORM -->
+
+<form 
+action="https://YOUR-USER.usX.list-manage.com/subscribe/post?u=YOUR_U_VALUE&amp;id=YOUR_ID_VALUE"
+method="POST"
+target="_blank"
+novalidate
+class="mailchimp-form"
+>
+
+<input
+type="email"
+name="EMAIL"
+placeholder="Enter your email"
+required
+>
+
+<!-- Hidden Mailchimp bot protection -->
+
+<div style="position:absolute; left:-5000px;" aria-hidden="true">
+<input 
+type="text" 
+name="b_xxxxxxxxxxxxxxxxxxx_xxxxxxx" 
+tabindex="-1" 
+value=""
+>
+</div>
+
+<button type="submit">
+Subscribe
+</button>
+
+</form>
+
+<p class="success-text">
+After subscribing, please confirm your email inbox.
+</p>
+
+</div>
+
+</section>
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    display:block;
+    color:blue;
+    margin-top:15px;
+    text-decoration:none;
+    font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+    background:blue;
+    text-align:center;
+    padding:30px;
+    color:white;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:purple;
+    color:white;
+    width:60px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:30px;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+    z-index:1000;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .profile-photo{
+        width:140px;
+        height:140px;
+    }
+
+    section{
+        padding:70px 6%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="logo">ECRET</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#blog">Blog</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<img src="Profile.jpg" class="profile-photo" alt="NUWAHEREZA ECRET">
+
+<h1>NUWAHEREZA ECRET</h1>
+
+<p>
+Professional Graphics Designer, Printing Expert, Blogger and Digital Brand Creator helping businesses grow through modern branding and online marketing.
+</p>
+
+<a href="blog.html" class="btn">Read My Blog</a>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="section-title">
+<h2>Services</h2>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>Graphic Design</h3>
+<p>
+Logos, posters, flyers, banners, social media graphics and branding designs.
+</p>
+</div>
+
+<div class="card">
+<h3>Printing Services</h3>
+<p>
+Professional printing for books, brochures, calendars, invoices and business materials.
+</p>
+</div>
+
+<div class="card">
+<h3>Email Marketing</h3>
+<p>
+Grow your audience and increase sales through strategic email campaigns.
+</p>
+</div>
+
+<div class="card">
+<h3>Blogging</h3>
+<p>
+Creative blogging solutions that help businesses improve SEO and online visibility.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- BLOG -->
+
+<section id="blog">
+
+<div class="section-title">
+<h2>Latest Blog Posts</h2>
+</div>
+
+<div class="blog-grid">
+
+<div class="blog-card">
+
+<img src="Logo.jpg" alt="Branding">
+
+<div class="blog-content">
+
+<h3>
+<a href="blog.html">
+Why Branding Matters
+</a>
+</h3>
+
+<p>
+Learn how professional branding helps businesses attract more customers online.
+</p>
+
+</div>
+
+</div>
+
+<div class="blog-card">
+
+<img src="blog2.jpg" alt="Printing Tips">
+
+<div class="blog-content">
+
+<h3>
+<a href="blog.html">
+Top Printing Tips
+</a>
+</h3>
+
+<p>
+Discover printing techniques that improve quality and professionalism.
+</p>
+
+</div>
+
+</div>
+
+<div class="blog-card">
+
+<img src="blog3.jpg" alt="Email Marketing">
+
+<div class="blog-content">
+
+<h3>
+<a href="blog.html">
+Growing With Email Marketing
+</a>
+</h3>
+
+<p>
+Use email marketing to build loyal customers and increase sales consistently.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GOOGLE REVIEWS -->
+
+<section id="reviews">
+
+<div class="section-title">
+<h2>Google Reviews</h2>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>
+Excellent branding and fast delivery. Very professional designer.
+</p>
+<h4>- Sarah Nabaasa.</h4>
+</div>
+
+<div class="card">
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>
+High quality printing services and good customer care.
+</p>
+<h4>- David Mukama.</h4>
+</div>
+
+<div class="card">
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>
+My business logo and posters were designed perfectly.
+</p>
+<h4>- Nahurira Diana.</h4>
+</div>
+
+</div>
+
+<div style="text-align:center; margin-top:40px;">
+
+<a 
+href="https://search.google.com/local/writereview?placeid='ChIJAzpm6TIa2RkRM0P7jBXYyOs'
+class="btn"
+target="_blank"
+>
+Leave A Google Review
+</a>
+
+</div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section>
+
+<div class="newsletter">
+
+<h2>Subscribe To My Newsletter</h2>
+
+<p>
+Get blogging tips, design inspiration and marketing updates directly in your inbox.
+</p>
+
+<form id="subscribeForm">
+
+<input
+type="email"
+placeholder="Enter your email"
+required
+>
+
+<button type="submit">Subscribe</button>
+
+</form>
+
+<p id="message"></p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-title">
+<h2>Contact Me</h2>
+</div>
+
+<div class="contact">
+
+<a href="tel:0775851533">
+📞 0775851533
+</a>
+
+<a href="tel:0741712498">
+📞 0741712498
+</a>
+
+<a href="mailto:nuwaecret@gmail.com">
+✉️ nuwaecret@gmail.com
+</a>
+
+<a href="https://wa.me/256775851533" target="_blank">
+💬 WhatsApp Chat
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 NUWAHEREZA ECRET | All Rights Reserved
+
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+
+<a 
+href="https://wa.me/256775851533"
+class="whatsapp"
+target="_blank"
+>
+💬
+</a>
+
+<script>
+
+const form = document.getElementById('subscribeForm');
+
+const message = document.getElementById('message');
+
+form.addEventListener('submit', function(e){
+
+e.preventDefault();
+
+message.innerHTML = "✅ Thank you for subscribing!";
+
+form.reset();
+
+});
+
+</script>
+
+</body>
+</html>
